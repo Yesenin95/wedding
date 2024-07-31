@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+   <title>Свадьба</title>
+</head>
+
+<body>
+   <section class="main">
+      <div class="div_img">
+         <div class="img-container img1-container" data-aos="fade-left">
+            <img class="img img1" src="/img/foto.jpg" alt="Фото">
+            <div class="name">Женя</div>
+         </div>
+         <div class="img-container img2-container" data-aos="fade-right">
+            <img class="img img2" src="/img/foto2.jpg" alt="Фото">
+            <div class="name">Надя</div>
+         </div>
+      </div>
+      <h1 class="title" data-aos="fade-down">Женя + Надя</h1>
+      <img src="/img/ravno.svg" alt="Равно" data-aos="fade-up">
+      <img class="heart" src="/img/heart.jpg" alt="Сердце" data-aos="fade-down">
+   </section>
+   <section class="main2">
+      <h2 data-aos="fade-up">
+         Узнали?
+      </h2>
+      <p data-aos="fade-left">
+         Время пронеслось незаметно и у этих двух милых деток скоро Свадьба! Да-да, мы сами в шоке!
+      </p>
+      <div class="img-container img1-container img3-container" data-aos="fade-right">
+         <img class="img img1 img3" src="/img/foto3.jpg" alt="Фото">
+         <div class="name name2">Сердца полные любви</div>
+      </div>
+   </section>
+   <section class="main3">
+      <h2 data-aos="fade-down"> Дорогие и любимые</h2>
+      <p data-aos="fade-down">Наша свадьба без Вас не будет такой счастливой, уютной и веселой! Приглашаем отметить этот
+         день вместе с нами!
+      </p>
+      <div class="data_container" data-aos="fade-right">
+         <p class="data">24/08/24</p>
+      </div>
+   </section>
+   <section class="main4">
+      <h2 data-aos="fade-up">Место проведения</h2>
+      <p>Деревня Гаврилково, ул.Дорожная, д.141а</p>
+      <button class="btn_adres" onclick="openGoogleMaps()">Построить маршрут</button>
+   </section>
+   <section class="main5">
+      <h2 data-aos="fade-down">Пожелания</h2>
+      <div data-aos="fade-left">
+         <img class="flower" src="/img/flower.png" alt="картинка цветов">
+      </div>
+      <p data-aos="fade-right">Сразу после свадьбы, мы уезжаем в свадебное путешествие, поэтому мы не успеем насладиться
+         красотой подаренными
+         Вами цветов. И будем рады, если вместо цветов Вы решите подарить нам настольные игры, которыми мы сможем
+         насладиться в свадебном путешествии.
+      </p>
+      <span data-aos="fade-up">
+         Если хотите подарить нам ценые и нужные подарки, мы будем благодарны за вклад в бюджет нашей молодой семьи
+      </span>
+   </section>
+   <section class="survey">
+      <iframe
+         src="https://docs.google.com/forms/d/e/1FAIpQLSckWeg_eRiYflCLFaQxY1nylaKM3ga0BohGlqS6jed5UnoP7A/viewform?embedded=true"
+         width="300" height="1163" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+   </section>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+   <script>
+      AOS.init({
+         duration: 1500,
+         once: false,
+      });
+      window.addEventListener('scroll', () => {
+         AOS.refresh();
+      });
+      function openGoogleMaps() {
+         const address = encodeURIComponent("Деревня Гаврилково, ул.Дорожная, д.141а Республика Татарстан");
+         const url = `https://www.google.com/maps/dir/?api=1&destination=${address}`;
+         window.open(url, '_blank');
+      }
+   </script>
+</body>
+
+</html>
