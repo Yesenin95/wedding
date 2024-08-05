@@ -6,7 +6,7 @@
     justify-content: center;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     background-color: white;
     box-sizing: border-box;
  }
@@ -15,14 +15,16 @@
  .main2,
  .main3,
  .main4,
- .main5 {
+ .main5,
+ .main6,
+ .main7 {
     height: 100vh;
     position: relative;
     text-align: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    box-sizing: border-box;
  }
 
  .div_img {
@@ -44,8 +46,9 @@
     border: 20px solid white;
     border-bottom: 60px solid white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    margin: 0 10px;
+    margin: 0 5px;
     position: relative;
+    box-sizing: border-box;
  }
 
  .img::before,
@@ -75,10 +78,10 @@
  .name {
     position: absolute;
     bottom: 5px;
-    font-size: 1.7em;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
-    width: calc(100% - 20px);
+    width: calc(100% - 50px);
  }
 
  .img1-container .name {
@@ -102,7 +105,7 @@
  }
 
  .title {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 400;
     margin: 20px 0;
     color: gray;
@@ -110,9 +113,7 @@
 
  .img-container img {
     display: inline-block;
-    width: 100px;
-    aspect-ratio: 1;
-    margin: 0 10px;
+    width: 145px;
  }
 
  .main_footer {
@@ -137,8 +138,13 @@
  .main5 span {
     font-size: 22px;
     color: gray;
-    width: 90vw;
+    width: 80vw;
     padding-bottom: 25px;
+ }
+
+ .main2 p {
+    width: 270px;
+    padding-left: 20px;
  }
 
  h2 {
@@ -169,7 +175,8 @@
     background-repeat: no-repeat;
  }
 
- .btn_adres {
+ .btn_adres,
+ .main6 button {
     padding: 13px 17px;
     background: #acd8ff;
     border: none;
@@ -194,4 +201,14 @@
 
  .main5 p {
     border-bottom: 1px solid black;
+ }
+
+ .main6 p {
+    font-size: 1.5em;
+ }
+
+ .main6 input,
+ .main6 label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
  }

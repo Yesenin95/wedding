@@ -69,10 +69,49 @@
          Если хотите подарить нам ценые и нужные подарки, мы будем благодарны за вклад в бюджет нашей молодой семьи
       </span>
    </section>
-   <section class="survey">
-      <iframe
-         src="https://docs.google.com/forms/d/e/1FAIpQLSckWeg_eRiYflCLFaQxY1nylaKM3ga0BohGlqS6jed5UnoP7A/viewform?embedded=true"
-         width="300" height="1163" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+   <section class="main7">
+      <h2>Контакты</h2>
+      <p>Если Вы приготовили для нас сюрприз, не забудьте предупредить нашего ведушего.</p>
+      <p>Николай <a href="">+7 960 033-08-89</a></p>
+      <div class="img-container img1-container img3-container" data-aos="fade-right">
+         <img class="img img1 img3" src="/img/foto4.jpeg" alt="Фото">
+      </div>
+   </section>
+   <section class="main6">
+      <form id="main6-form">
+         <p>Ваше Фамилия Имя</p>
+         <input type="text" id="name" name="name" required>
+
+         <p>Придете ли Вы на свадьбу?</p>
+         <input type="radio" id="attendance-yes" name="attendance" value="Да" required>
+         <label for="attendance-yes">Да</label><br>
+         <input type="radio" id="attendance-no" name="attendance" value="Нет">
+         <label for="attendance-no">Нет</label><br>
+         <input type="radio" id="attendance-undecided" name="attendance" value="Затрудняюсь ответить">
+         <label for="attendance-undecided">Затрудняюсь ответить</label><br>
+
+         <p>Хотите ли Вы остаться на второй день свадьбы?</p>
+         <input type="radio" id="stay-yes" name="stay" value="Да" required>
+         <label for="stay-yes">Да</label><br>
+         <input type="radio" id="stay-no" name="stay" value="Нет">
+         <label for="stay-no">Нет</label><br>
+         <input type="radio" id="stay-undecided" name="stay" value="Затрудняюсь ответить">
+         <label for="stay-undecided">Затрудняюсь ответить</label><br>
+
+         <p>Какой алкоголь Вы предпочитаете?</p>
+         <input type="checkbox" id="alcohol-sparkling" name="alcohol" value="Игристое">
+         <label for="alcohol-sparkling">Игристое</label><br>
+         <input type="checkbox" id="alcohol-red" name="alcohol" value="Красное вино">
+         <label for="alcohol-red">Красное вино</label><br>
+         <input type="checkbox" id="alcohol-white" name="alcohol" value="Белое вино">
+         <label for="alcohol-white">Белое вино</label><br>
+         <input type="checkbox" id="alcohol-beer" name="alcohol" value="Пиво">
+         <label for="alcohol-beer">Пиво</label><br>
+         <input type="checkbox" id="alcohol-strong" name="alcohol" value="Крепкое">
+         <label for="alcohol-strong">Крепкое</label><br><br>
+
+         <button type="button" onclick="submitSurvey()">Отправить</button>
+      </form>
    </section>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
    <script>
@@ -87,6 +126,27 @@
          const address = encodeURIComponent("Деревня Гаврилково, ул.Дорожная, д.141а Республика Татарстан");
          const url = `https://www.google.com/maps/dir/?api=1&destination=${address}`;
          window.open(url, '_blank');
+      }
+      function submitSurvey() {
+         const form = document.getElementById('main6-form');
+         const formData = new FormData(form);
+
+         let surveyData = "Ответы на опросник:\n";
+         surveyData += `1. Ваше Фамилия Имя: ${formData.get('name')}\n`;
+         surveyData += `2. Придете ли Вы на свадьбу?: ${formData.get('attendance')}\n`;
+         surveyData += `3. Хотите ли Вы остаться на второй день свадьбы?: ${formData.get('stay')}\n`;
+
+         const alcoholPreferences = [];
+         formData.getAll('alcohol').forEach(alcohol => {
+            alcoholPreferences.push(alcohol);
+         });
+
+         surveyData += `4. Какой алкоголь Вы предпочитаете?: ${alcoholPreferences.join(', ')}\n`;
+
+         const phoneNumber = "+79093092263"; // Замените на ваш номер телефона в формате: "79001234567"
+         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(surveyData)}`;
+
+         window.open(whatsappUrl, '_blank');
       }
    </script>
 </body>
