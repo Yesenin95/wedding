@@ -26,7 +26,7 @@
          </div>
       </div>
       <h1 class="title" data-aos="fade-down">Женя + Надя</h1>
-      <img src="/img/ravno.svg" alt="Равно" data-aos="fade-up">
+      <img class="ravno" src="/img/ravno.svg" alt="Равно" data-aos="fade-up">
       <img class="heart" src="/img/heart.jpg" alt="Сердце" data-aos="fade-down">
    </section>
    <section class="main2">
@@ -79,38 +79,52 @@
    </section>
    <section class="main6">
       <form id="main6-form">
-         <p>Ваше Фамилия Имя</p>
-         <input type="text" id="name" name="name" required>
+         <div>
+            <p>Ваше Фамилия Имя</p>
+            <input type="text" id="name" name="name" required>
+         </div>
+         <div>
+            <p>Придете ли Вы на свадьбу?</p>
+            <div>
+               <input type="radio" id="attendance-yes" name="attendance" value="Да" required>
+               <label for="attendance-yes">Да</label><br>
+               <input type="radio" id="attendance-no" name="attendance" value="Нет">
+               <label for="attendance-no">Нет</label><br>
+               <input type="radio" id="attendance-undecided" name="attendance" value="Затрудняюсь ответить">
+               <label for="attendance-undecided">Затрудняюсь ответить</label><br>
+            </div>
+         </div>
 
-         <p>Придете ли Вы на свадьбу?</p>
-         <input type="radio" id="attendance-yes" name="attendance" value="Да" required>
-         <label for="attendance-yes">Да</label><br>
-         <input type="radio" id="attendance-no" name="attendance" value="Нет">
-         <label for="attendance-no">Нет</label><br>
-         <input type="radio" id="attendance-undecided" name="attendance" value="Затрудняюсь ответить">
-         <label for="attendance-undecided">Затрудняюсь ответить</label><br>
+         <div>
+            <p>Хотите ли Вы остаться на второй день свадьбы?</p>
+            <div>
+               <input type="radio" id="stay-yes" name="stay" value="Да" required>
+               <label for="stay-yes">Да</label><br>
+               <input type="radio" id="stay-no" name="stay" value="Нет">
+               <label for="stay-no">Нет</label><br>
+               <input type="radio" id="stay-undecided" name="stay" value="Затрудняюсь ответить">
+               <label for="stay-undecided">Затрудняюсь ответить</label><br>
+            </div>
+         </div>
 
-         <p>Хотите ли Вы остаться на второй день свадьбы?</p>
-         <input type="radio" id="stay-yes" name="stay" value="Да" required>
-         <label for="stay-yes">Да</label><br>
-         <input type="radio" id="stay-no" name="stay" value="Нет">
-         <label for="stay-no">Нет</label><br>
-         <input type="radio" id="stay-undecided" name="stay" value="Затрудняюсь ответить">
-         <label for="stay-undecided">Затрудняюсь ответить</label><br>
+         <div>
+            <p>Какой алкоголь Вы предпочитаете?</p>
+            <div>
+               <input type="checkbox" id="alcohol-sparkling" name="alcohol" value="Игристое">
+               <label for="alcohol-sparkling">Игристое</label><br>
+               <input type="checkbox" id="alcohol-red" name="alcohol" value="Красное вино">
+               <label for="alcohol-red">Красное вино</label><br>
+               <input type="checkbox" id="alcohol-white" name="alcohol" value="Белое вино">
+               <label for="alcohol-white">Белое вино</label><br>
+               <input type="checkbox" id="alcohol-beer" name="alcohol" value="Пиво">
+               <label for="alcohol-beer">Пиво</label><br>
+               <input type="checkbox" id="alcohol-strong" name="alcohol" value="Крепкое">
+               <label for="alcohol-strong">Крепкое</label><br><br>
 
-         <p>Какой алкоголь Вы предпочитаете?</p>
-         <input type="checkbox" id="alcohol-sparkling" name="alcohol" value="Игристое">
-         <label for="alcohol-sparkling">Игристое</label><br>
-         <input type="checkbox" id="alcohol-red" name="alcohol" value="Красное вино">
-         <label for="alcohol-red">Красное вино</label><br>
-         <input type="checkbox" id="alcohol-white" name="alcohol" value="Белое вино">
-         <label for="alcohol-white">Белое вино</label><br>
-         <input type="checkbox" id="alcohol-beer" name="alcohol" value="Пиво">
-         <label for="alcohol-beer">Пиво</label><br>
-         <input type="checkbox" id="alcohol-strong" name="alcohol" value="Крепкое">
-         <label for="alcohol-strong">Крепкое</label><br><br>
-
-         <button type="button" onclick="submitSurvey()">Отправить</button>
+            </div>
+         </div>
+         <button class="btn" type="button" onclick="submitSurvey()">Отправить</button>
+         <p>P.S Ждём Вашего ответа до 10 числа.</p>
       </form>
    </section>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

@@ -11,6 +11,10 @@
     box-sizing: border-box;
  }
 
+ .ravno {
+    width: 30px;
+ }
+
  .main,
  .main2,
  .main3,
@@ -22,9 +26,12 @@
     position: relative;
     text-align: center;
     justify-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    width: 97vw;
+    overflow-x: hidden;
  }
 
  .div_img {
@@ -46,7 +53,6 @@
     border: 20px solid white;
     border-bottom: 60px solid white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    margin: 0 5px;
     position: relative;
     box-sizing: border-box;
  }
@@ -63,7 +69,7 @@
 
  .img::before {
     bottom: -30px;
-    left: -10px;
+    left: -30px;
     transform: rotate(45deg);
     box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.725);
  }
@@ -113,7 +119,7 @@
 
  .img-container img {
     display: inline-block;
-    width: 145px;
+    width: 90%;
  }
 
  .main_footer {
@@ -136,7 +142,7 @@
  .main4 p,
  .main5 p,
  .main5 span {
-    font-size: 22px;
+    font-size: 24px;
     color: gray;
     width: 80vw;
     padding-bottom: 25px;
@@ -191,12 +197,16 @@
  }
 
  .main4 p {
-    font-size: 36px;
+    font-size: 1.3em;
  }
 
  .flower {
     width: 130px;
     aspect-ratio: 1;
+ }
+
+ .main5 {
+    padding-top: 300px;
  }
 
  .main5 p {
@@ -211,4 +221,25 @@
  .main6 label {
     margin-bottom: 10px;
     font-size: 1.2em;
+ }
+
+ .main7 div {
+    padding-top: 20px;
+ }
+
+ .main7 p {
+    font-size: 1.3em;
+ }
+
+ .btn {
+    padding-bottom: 15px;
+ }
+
+ #main6-form {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    align-items: center;
+    padding-top: 300px;
+    padding-bottom: 50px;
  }
