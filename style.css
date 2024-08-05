@@ -22,7 +22,9 @@
  .main5,
  .main6,
  .main7 {
-    height: 100vh;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
     position: relative;
     text-align: center;
     justify-content: center;
@@ -31,7 +33,7 @@
     flex-direction: column;
     box-sizing: border-box;
     width: 97vw;
-    overflow-x: hidden;
+    overflow: hidden;
  }
 
  .div_img {
@@ -206,7 +208,7 @@
  }
 
  .main5 {
-    padding-top: 300px;
+    padding-top: 30px;
  }
 
  .main5 p {
@@ -239,8 +241,8 @@
     display: flex;
     flex-direction: column;
     width: 90vw;
+    height: 100%;
     align-items: center;
-    padding-top: 500px;
     padding-bottom: 50px;
  }
 
