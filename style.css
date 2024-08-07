@@ -1,3 +1,9 @@
+ a {
+    text-decoration: none;
+    cursor: pointer;
+    color: green;
+ }
+
  body {
     font-family: "Caveat", cursive;
     display: flex;
@@ -201,9 +207,11 @@
  .main4 p {
     font-size: 1.3em;
  }
-.main4 span{
-   font-size: 2rem;
-}
+
+ .main4 span {
+    font-size: 2rem;
+ }
+
  .flower {
     width: 130px;
     aspect-ratio: 1;
@@ -330,4 +338,82 @@
     width: 10px;
     height: 10px;
     background: white;
+ }
+
+ @media (min-width: 768px) {
+    h2 {
+       font-size: 2rem;
+    }
+
+    .img1,
+    .img2 {
+       height: 48vh;
+       aspect-ratio: 1;
+    }
+
+    .title {
+       font-size: 3rem;
+    }
+
+    .main2 p,
+    .main3 p,
+    .main4 p,
+    .main5 p,
+    .main5 span,
+    .main7 p {
+       font-size: 28px;
+       color: gray;
+       width: 80vw;
+       padding-bottom: 25px;
+    }
+
+    .img3-container .img3 {
+       width: 100%;
+    }
+
+    #main6-form {
+       padding-bottom: 0;
+    }
+ }
+
+ @media (min-width: 1024px) {
+    .title {
+       font-size: 4rem;
+    }
+
+    h2 {
+       font-size: 3rem;
+    }
+
+    .img-container .img {
+       height: 48vh;
+       aspect-ratio: 1;
+       width: 60%;
+    }
+ }
+
+ @media (min-width: 2560px) {
+    .title {
+       font-size: 7rem;
+    }
+
+    h2 {
+       font-size: 4.5rem;
+    }
+
+    .name {
+       font-size: 2.5rem;
+    }
+
+    .main2 p,
+    .main3 p,
+    .main4 p,
+    .main5 p,
+    .main5 span,
+    .main7 p {
+       font-size: 54px;
+       color: gray;
+       width: 80vw;
+       padding-bottom: 25px;
+    }
  }
