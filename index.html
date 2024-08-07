@@ -197,16 +197,16 @@
 
          window.open(whatsappUrl, '_blank');
       }
-      // function playAudio() {
-      //    var audio = document.getElementById("myAudio");
-      //    audio.play();
-      //    document.removeEventListener("touchstart", playAudio);
-      // }
+      function playAudio() {
+         var audio = document.getElementById("myAudio");
+         audio.play();
+         document.removeEventListener("touchstart", playAudio);
+      }
 
-      // document.addEventListener("DOMContentLoaded", function () {
-      //    document.addEventListener("click", playAudio);
-      //    document.addEventListener("touchstart", playAudio);
-      // });
+      document.addEventListener("DOMContentLoaded", function () {
+         document.addEventListener("click", playAudio);
+         document.addEventListener("touchstart", playAudio);
+      });
    </script>
 </body>
 
