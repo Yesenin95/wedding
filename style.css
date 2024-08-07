@@ -201,7 +201,9 @@
  .main4 p {
     font-size: 1.3em;
  }
-
+.main4 span{
+   font-size: 2rem;
+}
  .flower {
     width: 130px;
     aspect-ratio: 1;
